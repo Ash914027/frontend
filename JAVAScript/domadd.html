@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+    div {
+      border: 1px solid black;
+      margin: 10px;
+      padding: 10px;
+    }
+
+  </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT DOM</h1>
+    <h2>Adding new html elements</h2>
+    <div id="div1">
+      <p id="p1">This is a paragraph</p>
+      <p id="p2">this is another paragraph</p>
+    </div>
+    
+    <script>
+      const para = document.createElement("p");
+      para.style.color = "red";
+      para.style.fontSize = "16px";
+      para.style.fontWeight = "bold";
+      const node = document.createTextNode("This is new paragraph");
+      para.appendChild(node);
+      const element = document.getElementById("div1");
+      element.appendChild(para);
+      element.insertBefore(para, document.getElementById("p1"));
+    
+    </script>
+  </body>
+</html>

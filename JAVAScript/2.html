@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lists Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #56e82e;
+        }
+
+        input {
+            color: #000000;
+        }
+
+        label {
+            color: #000000;
+
+        }
+
+
+        .ONE {
+
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-areas: 'header header header header header header'
+                'main main main main right right'
+                'footer footer footer footer footer footer';
+            gap: 10px;
+            background-color: aqua;
+            padding: 10px;
+
+        }
+        div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .item {
+            grid-area: main;
+            background-color: aliceblue;
+            padding: 10px;
+            ;
+        }
+
+        .item2 {
+            grid-area: right;
+            background-color: rgb(89, 173, 245);
+            width: auto;
+            height: 300px;
+        }
+
+        .item3 {
+            grid-area: header;
+            background-color: rgb(234, 249, 120);
+
+        }
+
+        .item4 {
+            grid-area: footer;
+            background-color: rgb(125, 243, 143);
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 200;
+
+        }
+
+        p.dotted {
+            border-style: dotted;
+        }
+
+        p.dashed {
+            border-style: dashed;
+        }
+
+        p.solid {
+            border-style: solid;
+        }
+
+        p.double {
+            border-style: double;
+        }
+
+        p.groove {
+            border-style: groove;
+        }
+
+        p.ridge {
+            border-style: ridge;
+        }
+
+        p.inset {
+            border-style: inset;
+        }
+
+        p.outset {
+            border-style: outset;
+        }
+
+        p.none {
+            border-style: none;
+        }
+
+        p.hidden {
+            border-style: hidden;
+        }
+
+        p.mix {
+            border-style: dotted dashed solid double;
+        .item4 {
+            padding: 20px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="ONE">
+        <div class="item">
+            <form onsubmit="jsvalidaion()">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="name" ><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="name" >
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" >
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" >
+                <br><br>
+                <label for="fna" id="male">Gender:</label>
+                <label for="male">male</label>
+                <input type="radio" id="male">
+                <label for="female">female</label>
+                <input type="radio" id="male">
+                <br><br>
+                <label for="cars">Select a city:</label>
+                <select id="cars" name="cars">
+                    <option value="volvo">haryana</option>
+                    <option value="saab">punjab</option>
+                    <option value="fiat">up</option>
+                    <option value="audi"></option>
+                </select>
+                <br><br>
+                <label for="textr">Address:</label>
+                <textarea name="textr" id="" cols="45" rows="10"></textarea>
+                <br>
+                <input type="submit" value="Submit" onclick="handleSubmit()">
+
+            </form>
+        </div>
+        <div class="item2">
+            <img src="raam.png" alt="" height="300px">
+        </div>
+        <div class="item3">
+            <h1>Form html</h1>
+        </div>
+        <div class="item4"></div>
+
+
+    </div>
+    <div class="item4"></div>
+
+
+    </div>
+ 
+   
+    <script >
+//email validation course
+function handleSubmit(){
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        
+        if (name == "" || email == "" || password == ""){
+            alert("Please fill all the fields");
+        }
+
+        // check only cantaiin letters in name
+        else if (!/^[a-zA-Z]+$/.test(name)){
+            alert("Name should only contain letters");
+        }
+
+        else if (password.length < 8){
+            alert("Password should be atleast 8 characters long");
+        }
+        else{
+            console.log("form submitted");
+            setTimeout(() => {
+                alert("Form submitted successfully");
+                
+            }, 2000);
+        }
+
+    }
+
+
+    </script>
+
+</body>
+
+</html>

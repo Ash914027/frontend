@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The scroll right and scrollWidth properties</h1>
+    <div id="">
+        <div id="content">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.96IGOaKpG3kZZsXfn3EWGwHaEK&pid=Api&P=0&h=180"/>
+
+
+        </div>
+        <p id="demo"></p>
+    </div>
+    <script>
+        const element=documnet.getElementById('content');
+        let y=element.scrollHeight;
+        let x=element.scrollWidth;
+        document.getElementById("demo").innerHTML="Height: "+y+" width:"+x;
+    </script>
+</body>
+</html>

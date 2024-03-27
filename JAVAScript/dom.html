@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        #container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+}
+
+    </STYLE>
+</head>
+<body>
+    <div id ="container">
+        <div id ="animate">My animation will go here</div>
+      </div>
+      <script>
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+            function frame(){
+                if(pos == 350){
+                    clearInterval(id);
+                }else{
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }   
+            function printvalue(){
+                alert("Hello World");
+                var x = document.form.name.value;
+                alert("welcome"+x);
+            }
+            <p id="as">Example of addEventListener() method</p>
+            var x=getElementById("as").innerHTML();
+            function myNumbers(){
+                let n=0;
+                return function(){
+                    n+=1;
+                    return n;
+                }
+            }
+      </script>
+      <form>
+            <input type="text" name="name" value="Hello">
+            <input type="button" value="click me" onclick="printvalue()">
+      </form>
+    
+</body>
+</html>

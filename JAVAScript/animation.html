@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script type="text/javascript" >
+    var img=null;
+    function init() {
+        img=document.getElementById('img');
+        img.style.position='relative';
+        img.style.left='50px';
+        img.onclick=moveRight;
+    }
+    function moveRight(){
+       
+            img.style.left=parseInt(img.style.left)+100+'px';
+    }
+    function moveLeft() {
+        img.style.left=parseInt(img.style.left)-100+'px';
+    }
+   window.onload=init;
+</script>
+<body>
+    <form >
+    <img id="img" src="raam.png">
+    <p>click th button</p>
+    <input type="button" value="click me" onclick="moveRight()"/>
+    <p>click the button</p>
+    <input type ="button" value="click me" onclick="moveLeft()"/>
+    
+    </form>
+</html>

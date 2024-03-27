@@ -1,0 +1,114 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: green;
+            margin-bottom: 10px;
+        }
+    </style>
+    <style>
+        
+    </style>
+</head>
+<body>
+<form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>    
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" autocomplete required>
+        <br><br>
+        <input type="button" onclick="handleSubmit()" value="submit">
+    </form>
+    
+</body>
+<script>
+    function handleSubmit(){
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        
+        if (name == "" || email == "" || password == ""){
+            alert("Please fill all the fields");
+        }
+
+        // check only cantaiin letters in name
+        else if (!/^[a-zA-Z]+$/.test(name)){
+            alert("Name should only contain letters");
+        }
+
+        else if (password.length < 8){
+            alert("Password should be atleast 8 characters long");
+        }
+        else{
+            console.log("form submitted");
+            setTimeout(() => {
+                alert("Form submitted successfully");
+                
+            }, 2000);
+        }
+
+    }
+</script>
+</html>

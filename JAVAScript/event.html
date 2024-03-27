@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>mouseevent</title>
+    </head>
+    <body>
+        <h1 onclick="this.innerHTML='OOPS'">CLICK ME!</h1>
+        <P>Example of addEvent listener()</P>
+        <button id="myBtn">click me!</button>
+        <p id="para"></p>
+        <script>
+            document.getElementById("myBtn").addEventListener("click", function() {
+                document.getElementById("para").innerHTML = "Hello World"+"<br>"+"Welcome to LPU?";
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <style>
+        .ele{
+            border: 20px solid;
+            padding: 50px;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outermost" class="ele">
+        <div id="inner" class="ele">
+            <div id="innermost" class="ele"></div>
+        </div>
+    </div>
+    <script>
+        innermost.addEventListener("mouseover", function(){
+            this.style.borderColor = "red";
+            this.style.transform = "rotate(50turn)";
+            this.style.transition = "6s";
+        });
+        inner.addEventListener("mouseover", function(){
+            this.style.borderColor = "green";
+            this.style.transform = "rotate(50turn)";
+            this.style.transition = "8s";
+        });
+        outermost.addEventListener("mouseover", function(){
+            this.style.borderColor = "blue";
+            this.style.transform = "rotate(50turn)";
+            this.style.transition = "10s";
+        });
+        
+    </script>
+</body>
+</html>

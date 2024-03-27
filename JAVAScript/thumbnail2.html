@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .imageStyle {
+        width: 100px;
+        height: 100px;
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://i.pinimg.com/474x/08/a1/10/08a110f5175f52aa5f5a03af8ffa5c99.jpg"
+      style="border: 3px solid grey"
+      alt=""
+      id="mainImage"
+      height="500px"
+      width="540px"
+    />
+    <br />
+
+    <div
+      id="divId"
+      onclick="ChangeImageOnClick()"
+      onmouseover="f1()"
+      onmouseout="f2()"
+    >
+      <img
+        src="https://i.pinimg.com/474x/7a/d3/d0/7ad3d076c4662e9c3994b4c21edf61c3.jpg"
+        alt=""
+        id="1"
+        class="imageStyle"
+      />
+      <img
+        src="https://i.pinimg.com/564x/07/da/04/07da0413c2128af0ac9347db42f30953.jpg"
+        alt=""
+        id="2"
+        class="imageStyle"
+      />
+      <img
+        src="https://i.pinimg.com/564x/dd/b6/2a/ddb62a60d563d1653559b1f1614f974f.jpg"
+        alt=""
+        id="3"
+        class="imageStyle"
+      />
+      <img
+        src="https://i.pinimg.com/474x/39/5e/d4/395ed44ac2a19dde0b4f18ff3136888f.jpg"
+        alt=""
+        id="4"
+        class="imageStyle"
+      />
+      <img
+        src="https://i.pinimg.com/474x/18/42/05/184205f42f11adfb52884ccb6878a339.jpg"
+        alt=""
+        id="5"
+        class="imageStyle"
+      />
+    </div>
+
+    <script type="text/javascript">
+      function ChangeImageOnClick() {
+        var x = event.target;
+        if (x.tagName == "IMG") {
+          var a = x.getAttribute("src");
+          document.getElementById("mainImage").setAttribute("src", a);
+        }
+      }
+
+      function f1() {
+        var x = event.target;
+        x.style.cursor = "pointer";
+        x.style.borderColor = "red";
+      }
+
+      function f2() {
+        var x = event.target;
+        x.style.borderColor = "grey";
+      }
+    </script>
+  </body>
+</html>

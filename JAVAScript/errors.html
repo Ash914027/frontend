@@ -1,0 +1,54 @@
+<!-- <-- provide code for syntax errors, Reference errors, and type errors. --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+  <body>
+    <h1>Errors</h1>
+    <p>Open the console to see the errors</p>
+    <button onclick=myFunction() >Click me</button>
+
+    <script>
+        //Q1
+        // Syntax Error
+        console.log("Hello World");
+        // Reference Error
+    
+        console.log(a);
+        // Type Error
+        console.log(null.toUpperCase());
+    </script>
+    <script>
+        // Syntax error in the event handling function
+      document.getElementById("myButton").addEventListener('click', function() {
+      console.log("Button clicked!")
+      console.log("Syntax error here!"); // Missing semicolon at the end of the statement
+      });
+      // Adding an event listener with a syntax error
+    document.getElementById("myButton").addEventListener('click', function() {
+    console.log("Button clicked!");
+}); // Add a closing parenthesis ')' after the addEventListener function call
+
+
+        //Q2
+        let num1 = 10;
+        let num2 = "5";
+
+        let result = num1 + num2; // This will result in string concatenation instead of numerical addition
+        console.log(result); // Output: "105" instead of 15
+        let x = 5;
+        if (x == 5) {
+        console.log("x is equal to 5");
+        }
+        else {
+       console.log("x is not equal to 5"); // Missing a closing '}' bracket causing a syntax error
+        }
+        let number = 10;
+        let r = number / 0; // This will result in NaN (Not a Number)
+        console.log(r); // Output: Infinity
+    
+    </script>
+  </body>
+</html>

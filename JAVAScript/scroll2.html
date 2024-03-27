@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myDiv {
+        margin-top: 10px;
+        height: 200px;
+        width: 200px;
+        overflow: auto;
+      }
+      #content {
+        height: 2000px;
+        width: 2000px;
+        padding: 10px;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The scrollHeight and scrollWidth Properties</h1>
+    <div id="myDiv">
+      <div id="content">
+        <img
+          src="https://i.pinimg.com/474x/7a/d3/d0/7ad3d076c4662e9c3994b4c21edf61c3.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <p id="demo"></p>
+    <script>
+      const element = document.getElementById("content");
+      let y = element.scrollHeight;
+      let x = element.scrollWidth;
+      document.getElementById("demo").innerHTML =
+        "Height: " + y + " width :" + x;
+    </script>
+  </body>
+</html>

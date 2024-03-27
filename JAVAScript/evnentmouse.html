@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    
+  </style>
+  <body>
+    <title>mouseOver and out event listener</title>
+    <h1 id="we">MouseOver and Out Event Listener</h1>
+
+    <div>
+    <input type="button" value="Click me" id="btn" onclick="document.getElementById('we')" />
+    <button id="he">Click me</button>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("mouseover", function () {
+        alert("Mouse over me");
+        this.style.backgroundColor = "yellow";
+        this.style.color = "black";
+      });
+      btn.addEventListener("mouseout", function () {
+        alert("Mouse out");
+        this.style.backgroundColor = "white";
+        this.style.color = "black";
+      });
+    </script>
+
+    // No changes needed in this code block.
+  </body>
+</html>

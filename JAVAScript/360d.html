@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .ele{
+            border: 20px solid black;
+            padding: 40px;
+            position: relative;
+            top: 30%;
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outermost" class="ele">
+      <div id="inner" class="ele">
+        <div id="innermost" class="ele"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('innermost').addEventListener("mouseover", function () {
+        this.style.borderColor = "red";
+        this.style.transform = "rotate(360deg)";
+        this.style.transition = "2s";
+      });
+      document.getElementById('inner').addEventListener("mouseover", function () {
+        this.style.borderColor = "green";
+        this.style.transform = "rotate(360deg)";
+        this.style.transition = "2s";
+      });
+      document.getElementById('outermost').addEventListener("mouseover", function () {
+        this.style.borderColor = "blue";
+        this.style.transform = "rotate(360deg)";
+        this.style.transition = "2s";
+      });
+    </script>
+  </body>
+</html>

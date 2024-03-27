@@ -1,0 +1,47 @@
+//javascript validator
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Form Validation</h2>
+    <form name="myform" onsubmit="return validateForm()" method="post">
+      <label for="Name">First name:</label><br />
+      <input type="text"  name="Name"  /><br />
+      <label for="Note">Last name:</label><br />
+      <input type="text"  name="Name"  /><br>
+      <label for="email"></label>email<br />
+      <input type="text"  name="EMail" />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>Note that the form itself is not visible.</p>
+
+
+
+    <script>
+      function validateForm() {
+       
+      if (document.myForm.Name.value == "") {
+        alert("Please provide your name!");
+        document.myForm.Name.focus();
+        return false;
+      }
+      if (document.myForm.EMail.value == "") {
+        alert("Please provide your Email!");
+        document.myForm.EMail.focus();
+        return false;
+      }
+      if (document.myForm.chec.checked == false) {
+        alert("Please accept the terms and conditions");
+        document.myForm.chec.focus();
+        return false;
+      }
+    }
+    </script>
+  </body>
+</html>

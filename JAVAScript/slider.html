@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0;">
+    <img name="Slide" width="50%" height="60%">
+
+    <script>
+        var i=0;
+        var images=Array();
+        images[0]='image1.jpg';
+        images[1]='image2.jpg';
+        images[2]='image3.jpg';
+        images[3]='image4.jpg';
+        images[4]='image5.jpg';
+
+        function changeImage(){
+            document.slide.src=images[i];
+            if(i<images.length-1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+        }
+        setTimeout("changeImage()",1000);
+        //setTimeout("changeImage",1000) is also correct
+    </script>
+    
+</body>
+</html>

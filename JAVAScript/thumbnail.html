@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .imageStyle{
+            width : 100px ; 
+            height:  100px ;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>  
+    <img src="https://wallpapercave.com/wp/wp2665219.jpg" style="border: 3px solid grey;" alt="" id="mainUmage" height="500px" width="540px"> <br>
+
+    <div id="divId" onclick="ChangeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+
+        
+        <img src="https://tse1.mm.bing.net/th?id=OIP.1YM53mG10H_U25iPjop83QHaEo&pid=Api&P=0&h=180" alt="" id="1" class="imageStyle">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.zvTH42gSclJtNydj25IWbAHaE7&pid=Api&P=0&h=180" alt="" id="2" class="imageStyle">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.uVAcDyj4Nk8_CXCtX78xpwHaEo&pid=Api&P=0&h=180" alt="" id="3" class="imageStyle">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.Ch7muoOO6RDEQyzLnsrSLQHaFe&pid=Api&P=0&h=180" alt="" id="4" class="imageStyle">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.9aZoZGrDJpFFNC2EnwVpDgHaEK&pid=Api&P=0&h=180" alt="" id="5" class="imageStyle">
+        
+    </div>
+
+    <script type="text/javascript">
+        function ChangeImageOnClick(){
+            var x = event.target; 
+            if (x.tagName === "IMG"){
+                var a = x.getAttribute("src");
+                document.getElementById("mainUmage").setAttribute("src", a);
+            }
+        }
+    
+        function f1(){
+            var x = event.target; 
+            x.style.cursor = 'pointer'; 
+            x.style.borderColor = 'red';
+        }
+    
+        function f2(){
+            var x = event.target;
+            x.style.borderColor = 'grey';
+        }
+    </script>
+</body>
+</html>

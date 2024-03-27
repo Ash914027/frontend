@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>javaScript iterables</p>
+</body>
+<script>
+    //iterables
+    //array
+    let iterable = [10, 20, 30];
+    for (let value of iterable) {
+        console.log(value);
+    }
+    //string
+    iterable = "boo";
+    for (let value of iterable) {
+        console.log(value);
+    }
+    //map
+    iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+    for (let entry of iterable) {
+        console.log(entry);
+    }
+    //set
+    iterable = new Set([1, 1, 2, 2, 3, 3]);
+    for (let value of iterable) {
+        console.log(value);
+    }
+    //arguments
+    (function() {
+        for (let argument of arguments) {
+            console.log(argument);
+        }
+    })(1, 2, 3);
+    //user-defined iterables
+    iterable = {
+        [Symbol.iterator]() {
+            return {
+                i: 0,
+                next() {
+                    if (this.i < 3) {
+                        return { value: this.i++, done: false };
+                    }
+                    return { value: undefined, done: true };
+                }
+            };
+        }
+    };
+    for (let value of iterable) {
+        console.log(value);
+    }
+    //iterable and array
+    iterable = [3, 5, 7];
+    iterable.foo = 'hello';
+    for (let i in iterable) {
+        console.log(i); // logs "0", "1", "2", "foo"
+    }
+    for (let i of iterable) {
+        console.log(i); // logs 3, 5, 7
+    }
+    n.next();
+    n.next();
+</script>
+</html>

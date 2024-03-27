@@ -1,0 +1,25 @@
+<html>
+  <head> </head>
+  <body>
+    <center>
+      <button onclick="start()">start</button>
+      <button onclick="stop()">stop</button>
+      <p id="demo"></p>
+    </center>
+  </body>
+  <script>
+    var i;
+    function start() {
+      i = setInterval(datetime, 1000);
+    }
+    function datetime() {
+      document.getElementById("demo").innerHTML = Date();
+      document.getElementById("demo").style.cssText =
+        "font-size:70px;color:red";
+    }
+    stop();
+    {
+      clearInterval(i);
+    }
+  </script>
+</html>
