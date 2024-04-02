@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <p class="content">This is a paragraph.</p>
+    <input type="text" name="username" >
+    <input type="text" name="email" >
+
+    <script>
+        $(document).ready(function() {
+            // Select elements by name and manipulate their content
+            $('input[name="username"]').val('New Username');
+            $('input[name="email"]').val('newemail@example.com');
+
+            // Select elements by name and manipulate their attributes
+            $('input[name="username"]').attr('placeholder', 'Enter your username');
+            $('input[name="email"]').attr('placeholder', 'Enter your email');
+
+            // Select elements by name and update HTML elements with JSON data
+            var jsonData = {
+                "username": "John Doe",
+                "email": "johndoe@example.com"
+            };
+
+            $('input[name="username"]').val(jsonData.username);
+            $('input[name="email"]').val(jsonData.email);
+        });
+    </script>
+</body>
+</html>
