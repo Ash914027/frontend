@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"John",
+        "age":21,
+        "Department":"CSE",
+        "Address":"Dhaka"
+    }
+    ,
+    {
+        "id":2,
+        "name":"Doe",
+        "age":22,
+        "Department":"EEE",
+        "Address":"Gwalior"
+    }
+    ,
+    {
+        "id":3,
+        "name":"Rahim",
+        "age":23,
+        "Department":"BBA",
+        "Address":"Kolkata"
+
+
+    }
+    ,
+    {
+       "id":4,
+        "name":"Karim",
+        "age":24,
+        "Department":"Civil",
+        "Address":"Delhi"
+
+
+
+    }
+]
